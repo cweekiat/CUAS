@@ -19,13 +19,7 @@ Dataset | Size | Description | Links
 **Vis-Drone** | 288 video clips (261,908 frames) <br /> 10,209 static images | Drone-captured images of objects, such as pedestrians, cars, bicycles, and tricycles | [Link](https://github.com/VisDrone/VisDrone-Dataset)
 **CUAS** | Total 8,555 images | Contains videos of drones captured from other drones and ground-based cameras | [Link](https://universe.roboflow.com/wk-meyzk/cuas-pq71v)
 
-
-## 2. Trained Weights
-[Google Drive](https://drive.google.com/drive/folders/1ZYfYUv00o63Q2O8Ozsd7JQif42KH38Ra?usp=drive_link)
-
-Explore the following pre-trained detection models designed specifically for countering unmanned aerial systems. These models from the Google Drive are ready to be used or fine-tuned for CUAS detection tasks. They trained using various models, including YOLOv8 and Detection Transformers (DETR).
-
-## 3. Challenges of Drone Detection and Tracking
+## 2. Challenges of Drone Detection and Tracking
 * Out-of-View: Re-ID difficult when the target moves out of the frame.
 * Occlusion: Target is partially or heavily occluded.
 * Dynamic Background Clusters: Dynamic changes (e.g., buildings, leaves, birds) in the background around the target.
@@ -35,7 +29,7 @@ Explore the following pre-trained detection models designed specifically for cou
 * Moving Camera: Affects filters used for tracking.
 * Limited Computational Resources: Limited by GPU and computing power on drone
 
-## 4. Method 
+## 3. Method 
 
 <img src="models/method.png" alt="Method" width="100%">
 
@@ -51,7 +45,7 @@ The traditional computer vision component consists of three parts: background mo
 ### Merging and Combining Detections
 In the final step, we merge the detections from YOLOv8 and the traditional methods. Bounding boxes and tracking IDs are combined, ensuring consistent object identification across frames. A detection is considered positive, and marked with a green bounding box, if both methods detect the same object, reducing false positives and enhancing accuracy. This hybrid approach leverages the strengths of both deep learning and traditional image processing to ensure reliable drone detection in diverse and challenging environments.
 
-## 5. Installation
+## 4. Installation
 
 ### Prerequisites
 - [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) must be installed on your system.
